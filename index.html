@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/cd18428f68.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+        <title>Task Board</title>
+    </head>
+
+    <body>
+
+        <h1>My Task Board</h1>
+
+        <div id="notepadDiv">
+            <textarea name="task" id="todoTask" placeholder="The task is..."></textarea>
+
+            <p>Accomplish until &nbsp;
+                <input type="date" id="dateOfTask">
+                <input type="time" id="timeOfTask">
+                <button onclick="onClickAdd()" id="addTask" type="submit" class="btn btn-warning">Add task</button>
+                <button onclick="cleanInputs()" id="cleanNotes" type="submit" class="btn btn-warning">Clean notes</button>
+            </p>
+
+            <div id="errorsDiv"></div>
+            
+        </div>
+
+        <div id="todoList"></div>
+
+        <script src="main.js"></script>
+    </body>
+
+</html>

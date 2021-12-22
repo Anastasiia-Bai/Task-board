@@ -1,0 +1,126 @@
+body {
+    background-image: url("image/background.jpg");
+    min-height: 100%;
+    font-family: "Dancing Script", cursive;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#todoTask {
+    background-image: url("image/notepad.png");
+    height: 200px;
+    width: 600px;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 32px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    padding-left: 90px;
+    padding-right: 5%;
+    line-height: 1.6;
+}
+
+#addTask, #cleanNotes {
+    height: 40px;
+    width: 120px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#notepadDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.todo-card {
+    background-image: url("image/notebg.png");
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    text-align: center;
+    margin-left: 40px;
+    position: relative;
+}
+
+.task {
+    font-size: 20px;
+    height: 50%;
+    width: 80%;
+    overflow-y: auto;
+    word-wrap: break-word;
+    position: absolute;
+    top: 20%;
+    left: 10px;
+}
+
+.date-time-of-task {
+    font-size: 12px;
+    gap: 10px;
+    position: absolute;
+    bottom: 5%;
+    left: 10px;
+}
+
+input {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, yellow, rgb(187, 255, 99));
+}
+
+#errorsDiv {
+    color: red;
+    font-size: 22px;
+}
+
+.todo-card:hover .fas {
+    visibility: visible;
+}
+
+.fas {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    border: none;
+    background-color: rgb(254,255,153);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.todo-card {
+    animation: show 1.2s;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        width: 0;
+        transform: transitionX(0deg);
+    } 
+    100%{
+        opacity: 1;
+        width: 200px;
+        transform: transitionX(360deg);
+    }
+}
